@@ -1,0 +1,3 @@
+[submodule "lotus-imagecrop"]
+	path = lotus-imagecrop
+	url = https://github.com/bemineni/lotus-imagecrop.git
