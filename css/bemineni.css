@@ -1,0 +1,17 @@
+
+.project{
+	margin-top: 30px;
+}
+
+.divider{
+	margin-bottom: 10px;
+}
+
+.rounded{
+	-moz-border-radius-topright: 3px;
+    -webkit-border-top-right-radius: 3px;
+    border-top-right-radius: 3px;
+    -moz-border-radius-bottomright: 3px;
+    -webkit-border-bottom-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}

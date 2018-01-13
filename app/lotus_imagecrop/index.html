@@ -1,0 +1,160 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="apple-touch-icon" href="icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="../../css/normalize.css">
+        <link rel="stylesheet" href="../../css/main.css">
+        <link rel="stylesheet" href="../../css/carousel.css">
+        <link rel="stylesheet" href="../../css/bemineni.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+        <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.12.0/build/styles/default.min.css"> -->
+        <link rel="stylesheet" href="../../css/monokai-sublime.css">
+        <link rel="stylesheet" href="../../lotus-imagecrop/stylesheet/lotusimagecrop.css">
+
+
+
+    </head>
+    <body>
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <header>
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                <a class="navbar-brand" href="bemineni.github.io">Srikanth Bemineni</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About me</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main role="main">
+            
+            <div class="container project">
+                <h2>Lotus Image crop</h2>
+                <hr class="divider">
+                <p>A jQuery plugin to crop a image visually for the user. The user selection options can be retrieved using the api's to be processed by any image processing tool</p>
+                <pre>
+                    <code class="javascript rounded">
+$(".lotus-image-container").lotusImageCrop({'onchange': function(top,left,zoom,width,height){
+      $("#x-position").val(left.toString())
+      $("#y-position").val(top.toString())
+      $('#zoom').val(zoom)
+}})
+
+$("#increase").on('click',function(e){
+    $(".lotus-image-container").lotusImageCrop('increaseZoom')
+    e.preventDefault();
+})
+
+$("#decrease").on('click',function(e){
+    $(".lotus-image-container").lotusImageCrop('decreaseZoom')
+    e.preventDefault();
+})
+                    </code>
+                </pre>
+
+                <h3>Demo</h3>
+                <hr class="divider">
+
+                <form style="margin-bottom:20px;">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="x-position">X position</label>
+                            <input type="text" class="form-control" id="x-position">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="y-position">Password</label>
+                            <input type="text" class="form-control" id="y-position">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="zoom">Zoom</label>
+                            <input type="text" class="form-control" id="zoom">
+                        </div>
+                    </div>
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <button href="#"  class="btn btn-primary btn-sm" id="increase">Increase zoom</button>
+                        <button href="#"  class="btn btn-dark btn-sm" id="decrease">Decrease zoom</button>
+                    </div>
+                </form>
+
+                
+                <div class="lotus-image-container" 
+                     style="height:500px; width:100%;" 
+                     data-src="https://d1u1mce87gyfbn.cloudfront.net/media/artwork/genji-concept.jpg" 
+                     data-clip-height="320"
+                     data-clip-width="320" 
+                     data-zoom="100">
+                </div>
+            </div>
+
+            
+            <!-- FOOTER -->
+            <footer class="container">
+                <p class="float-right"><a href="#">Back to top</a></p>
+                <p>&copy; 2017 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+             </footer>
+        </main>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script src="../../js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="../../lotus-imagecrop/src/lotusimagecrop.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('pre code').each(function(i, block) {
+                    hljs.highlightBlock(block);
+                });
+
+                $(".lotus-image-container").lotusImageCrop({'onchange': function(top,left,zoom,width,height){
+                      $("#x-position").val(left.toString())
+                      $("#y-position").val(top.toString())
+                      $('#zoom').val(zoom)
+                }})
+
+                $("#increase").on('click',function(e){
+                    $(".lotus-image-container").lotusImageCrop('increaseZoom')
+                    e.preventDefault();
+                })
+
+                $("#decrease").on('click',function(e){
+                    $(".lotus-image-container").lotusImageCrop('decreaseZoom')
+                    e.preventDefault();
+                })
+            });
+
+
+        </script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+
+        <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+        <script>
+            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+            ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
+        </script>
+        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+    </body>
+</html>
