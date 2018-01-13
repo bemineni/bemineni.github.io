@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Lotus Select</title>
+        <title>ELDAM</title>
         <meta name="description" content="Srikanth Bemineni bemineni.github.io">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -18,7 +18,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
         <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.12.0/build/styles/default.min.css"> -->
         <link rel="stylesheet" href="../../css/monokai-sublime.css">
-        <link rel="stylesheet" href="../../lotus-select/stylesheets/lotusselect.css">
+
     </head>
     <body>
         <!--[if lte IE 9]>
@@ -49,64 +49,34 @@
             
             <div class="container project">
                 <div class="section">
-                    <h2>Lotus Select</h2>
+                    <h2>ELDAM</h2>
                     <hr class="divider">
-                    <p>Lotus select is a nice replacement for the html select. It adds some small benefits over the select element.</p>
-                    <ul>
-                        <li>One thing that I always hated with select was the space. It always takes longest element space on the document. With this new select plugin the space is restricted to the option item that is displayed.</li>
-                        <li>We have lot of options to change the settings.</li>
-                        <li>User can search through the list of options.</li>
-                    </ul>
-
+                    <p>Elasticsearch data manager (ELDAM) with zope transaction support. Other transaction data manager like sqlalchemy use the database atomic operation feature to rollback if an error occurs during the commit process. This is not achievable in elastic search. To overcome this eldam finalizes the records in the commit call of the two-phase transaction process. At the same time takes backup of the existing data in the index, if it involves removing or updating a record.</p>
+                    <hr class="divider">
+                    <h4> How to install </h4>
+                    <p>eldam is only supported on python 3.x</p>
                     <pre>
-                        <code class="javascript rounded">
-    $('#cars').lotusSelect();
+                        <code class="python rounded">
+    pip install eldam
                         </code>
                     </pre>
                 </div>
                 <div class="section">
-                    <h3>Demo</h3>
-                    <hr class="divider">
-
-                    <select id="cars">
-                        <option>Audi R8</option>
-                        <option>Audi TT</option>
-                        <option>Chrysler Crossfire</option>
-                        <option>Chevrolet Corvette</option>
-                        <option>Ferrari 125 S</option>
-                        <option>Ferrari 195 S</option>
-                        <option>Ferrari Enzo</option>
-                        <option>Lotus Elise</option>
-                        <option>Ford Shelby Cobra GT500</option>
-                        <option>Subaru Impreza STi</option>
-                        <option>Porsche 911</option>
-                        <option>Pagani Zonda C12 S</option>
-                        <option>Nissan Skyline GT-R</option>
-                        <option>Mitsubishi Lancer Evo VIII</option>
-                        <option>Aston Martin DB4 GT Zagato</option>
-                        <option>BMW M3 GTR</option>
-                        <option>Jaguar E-type Series 1</option>
-                        <option>Mercedes-Benz SLR McLaren</option>
-                        <option>Ferrari F40</option>
-                        <option>Lamborghini Diablo</option>
-                        <option>Dodge Viper GTS</option>
-                        <option>Bugatti Veyron</option>
-                        <option>Porsche Carrera GT</option>
-                        <option>Ferrari 250 GTO</option>
-                    </select>
+                    <h3> Documenation </h3>
+                    <p> ELDAM documenation is at <a href="http://eldam.readthedocs.io/en/latest/">readthedocs.</a></p>
                 </div>
-
                 <div class="section">
                     <h3> Where can I find the code ? </h3>
                     <hr class="divider">
-                    <p> On Github - <a href="https://github.com/bemineni/lotus-select">Lotus Select</a></p>
+                    <p> On Github - <a href="https://github.com/bemineni/eldam">ELDAM</a></p>
                 </div>
             </div>
+
             
             <!-- FOOTER -->
-            <footer class="container footer-styles">
+            <footer class="container">
                 <p class="float-right"><a href="#">Back to top</a></p>
-                <p>&copy; 2017 - .... Srikanth Bemineni, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+                <p>&copy; 2017 - .... Srikanth Bemineni. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
              </footer>
         </main>
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
@@ -114,14 +84,11 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-        <script src="../../lotus-select/src/lotusselect.js"></script>
         <script>
             $(document).ready(function() {
                 $('pre code').each(function(i, block) {
                     hljs.highlightBlock(block);
                 });
-
-                $('#cars').lotusSelect();
             });
 
 

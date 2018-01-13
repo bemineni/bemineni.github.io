@@ -3,8 +3,8 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
-        <meta name="description" content="">
+        <title>Lotus Image crop</title>
+        <meta name="description" content="Srikanth Bemineni bemineni.github.io">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <link rel="manifest" href="site.webmanifest">
@@ -31,14 +31,14 @@
         <!-- Add your site or application content here -->
         <header>
             <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-                <a class="navbar-brand" href="https://bemineni.github.io/">Srikanth Bemineni</a>
+                <a class="navbar-brand" href="https://bemineni.github.io">Srikanth Bemineni</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="https://bemineni.github.io/">Home <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="https://bemineni.github.io">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="https://bemineni.github.io/about_me.html">About me</a>
@@ -51,28 +51,30 @@
         <main role="main">
             
             <div class="container project">
-                <h2>Lotus Image crop</h2>
-                <hr class="divider">
-                <p>A jQuery plugin to crop a image visually for the user. The user selection options can be retrieved using the api's to be processed by any image processing tool.</p>
-                <pre>
-                    <code class="javascript rounded">
-$(".lotus-image-container").lotusImageCrop({'onchange': function(top,left,zoom,width,height){
-      $("#x-position").val(left.toString())
-      $("#y-position").val(top.toString())
-      $('#zoom').val(zoom)
-}})
+                <div class="section">
+                    <h2>Lotus Image crop</h2>
+                    <hr class="divider">
+                    <p>A jQuery plugin to crop a image visually for the user. The user selection options can be retrieved using the api's to be processed by any image processing tool.</p>
+                    <pre>
+                        <code class="javascript rounded">
+    $(".lotus-image-container").lotusImageCrop({'onchange': function(top,left,zoom,width,height){
+          $("#x-position").val(left.toString())
+          $("#y-position").val(top.toString())
+          $('#zoom').val(zoom)
+    }})
 
-$("#increase").on('click',function(e){
-    $(".lotus-image-container").lotusImageCrop('increaseZoom')
-    e.preventDefault();
-})
+    $("#increase").on('click',function(e){
+        $(".lotus-image-container").lotusImageCrop('increaseZoom')
+        e.preventDefault();
+    })
 
-$("#decrease").on('click',function(e){
-    $(".lotus-image-container").lotusImageCrop('decreaseZoom')
-    e.preventDefault();
-})
-                    </code>
-                </pre>
+    $("#decrease").on('click',function(e){
+        $(".lotus-image-container").lotusImageCrop('decreaseZoom')
+        e.preventDefault();
+    })
+                        </code>
+                    </pre>
+                </div>
 
                 <div class="section">
 
