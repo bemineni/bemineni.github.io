@@ -1,3 +1,6 @@
 [submodule "lotus-imagecrop"]
 	path = lotus-imagecrop
 	url = https://github.com/bemineni/lotus-imagecrop.git
+[submodule "lotus-select"]
+	path = lotus-select
+	url = https://github.com/bemineni/lotus-select.git

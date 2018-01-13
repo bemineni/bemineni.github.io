@@ -18,10 +18,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
         <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.12.0/build/styles/default.min.css"> -->
         <link rel="stylesheet" href="../../css/monokai-sublime.css">
-        <link rel="stylesheet" href="../../lotus-imagecrop/stylesheet/lotusimagecrop.css">
-
-
-
+        <link rel="stylesheet" href="../../lotus-select/stylesheets/lotusselect.css">
     </head>
     <body>
         <!--[if lte IE 9]>
@@ -51,80 +48,63 @@
         <main role="main">
             
             <div class="container project">
-                <h2>Lotus Image crop</h2>
+                <h2>Lotus Select</h2>
                 <hr class="divider">
-                <p>A jQuery plugin to crop a image visually for the user. The user selection options can be retrieved using the api's to be processed by any image processing tool.</p>
+                <p>Lotus select is a nice replacement for the html select. It adds some small benefits over the select element.</p>
+                <ul>
+                    <li>One thing that I always hated with select was the space. It always takes longest element space on the document. With this new select plugin the space is restricted to the option item that is displayed.</li>
+                    <li>We have lot of options to change the settings.</li>
+                    <li>User can search through the list of options.</li>
+                </ul>
+
                 <pre>
                     <code class="javascript rounded">
-$(".lotus-image-container").lotusImageCrop({'onchange': function(top,left,zoom,width,height){
-      $("#x-position").val(left.toString())
-      $("#y-position").val(top.toString())
-      $('#zoom').val(zoom)
-}})
-
-$("#increase").on('click',function(e){
-    $(".lotus-image-container").lotusImageCrop('increaseZoom')
-    e.preventDefault();
-})
-
-$("#decrease").on('click',function(e){
-    $(".lotus-image-container").lotusImageCrop('decreaseZoom')
-    e.preventDefault();
-})
+$('#cars').lotusSelect();
                     </code>
                 </pre>
-
                 <div class="section">
-
                     <h3>Demo</h3>
                     <hr class="divider">
 
-                    <form style="margin-bottom:20px;">
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="x-position">X position</label>
-                                <input type="text" class="form-control" id="x-position">
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="y-position">Y position</label>
-                                <input type="text" class="form-control" id="y-position">
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-4">
-                                <label for="zoom">Zoom</label>
-                                <input type="text" class="form-control" id="zoom">
-                            </div>
-                        </div>
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                            <button href="#"  class="btn btn-primary btn-sm" id="increase">Increase zoom</button>
-                            <button href="#"  class="btn btn-dark btn-sm" id="decrease">Decrease zoom</button>
-                        </div>
-                    </form>
-
-                    
-                    <div class="lotus-image-container" 
-                         style="height:500px; width:100%;" 
-                         data-src="https://d1u1mce87gyfbn.cloudfront.net/media/artwork/genji-concept.jpg" 
-                         data-clip-height="320"
-                         data-clip-width="320" 
-                         data-zoom="100">
-                    </div>
+                    <select id="cars">
+                        <option>Audi R8</option>
+                        <option>Audi TT</option>
+                        <option>Chrysler Crossfire</option>
+                        <option>Chevrolet Corvette</option>
+                        <option>Ferrari 125 S</option>
+                        <option>Ferrari 195 S</option>
+                        <option>Ferrari Enzo</option>
+                        <option>Lotus Elise</option>
+                        <option>Ford Shelby Cobra GT500</option>
+                        <option>Subaru Impreza STi</option>
+                        <option>Porsche 911</option>
+                        <option>Pagani Zonda C12 S</option>
+                        <option>Nissan Skyline GT-R</option>
+                        <option>Mitsubishi Lancer Evo VIII</option>
+                        <option>Aston Martin DB4 GT Zagato</option>
+                        <option>BMW M3 GTR</option>
+                        <option>Jaguar E-type Series 1</option>
+                        <option>Mercedes-Benz SLR McLaren</option>
+                        <option>Ferrari F40</option>
+                        <option>Lamborghini Diablo</option>
+                        <option>Dodge Viper GTS</option>
+                        <option>Bugatti Veyron</option>
+                        <option>Porsche Carrera GT</option>
+                        <option>Ferrari 250 GTO</option>
+                    </select>
                 </div>
 
                 <div class="section">
                     <h3> Where can I find the code ? </h3>
                     <hr class="divider">
-                    <p> On Github - <a href="https://github.com/bemineni/lotus-imagecrop">Lotus Select</a></p>
+                    <p> On Github - <a href="https://github.com/bemineni/lotus-select">Lotus Select</a></p>
                 </div>
-
             </div>
-
             
             <!-- FOOTER -->
             <footer class="container footer-styles">
                 <p class="float-right"><a href="#">Back to top</a></p>
-                <p>&copy; 2017 - .... Srikanth Bemineni. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+                <p>&copy; 2017 - .... Srikanth Bemineni, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
              </footer>
         </main>
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
@@ -132,28 +112,14 @@ $("#decrease").on('click',function(e){
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-        <script src="../../lotus-imagecrop/src/lotusimagecrop.js"></script>
+        <script src="../../lotus-select/src/lotusselect.js"></script>
         <script>
             $(document).ready(function() {
                 $('pre code').each(function(i, block) {
                     hljs.highlightBlock(block);
                 });
 
-                $(".lotus-image-container").lotusImageCrop({'onchange': function(top,left,zoom,width,height){
-                      $("#x-position").val(left.toString())
-                      $("#y-position").val(top.toString())
-                      $('#zoom').val(zoom)
-                }})
-
-                $("#increase").on('click',function(e){
-                    $(".lotus-image-container").lotusImageCrop('increaseZoom')
-                    e.preventDefault();
-                })
-
-                $("#decrease").on('click',function(e){
-                    $(".lotus-image-container").lotusImageCrop('decreaseZoom')
-                    e.preventDefault();
-                })
+                $('#cars').lotusSelect();
             });
 
 
