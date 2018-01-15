@@ -55,8 +55,18 @@
                     <h2>Lotus Image crop</h2>
                     <hr class="divider">
                     <p>A jQuery plugin to crop a image visually for the user. The user selection options can be retrieved using the api's to be processed by any image processing tool.</p>
-                    <pre>
-                        <code class="javascript rounded">
+                    <div class="section">
+                        <h3>How to use it</h3>
+                        <hr class="divider">
+                        <label> HTML </label>
+                        <pre><code class="html rounded">&lt;div class=&quot;lotus-image-container&quot; 
+         style=&quot;height:500px; width:100%;&quot; 
+         data-src=&quot;https://d1u1mce87gyfbn.cloudfront.net/media/artwork/genji-concept.jpg&quot; 
+         data-clip-height=&quot;320&quot;
+         data-clip-width=&quot;320&quot; 
+         data-zoom=&quot;100&quot;&gt;</code></pre>
+                        <label>Plugin usage </label>
+                        <pre><code class="javascript rounded">
     $(".lotus-image-container").lotusImageCrop({'onchange': function(top,left,zoom,width,height){
           $("#x-position").val(left.toString())
           $("#y-position").val(top.toString())
@@ -71,9 +81,8 @@
     $("#decrease").on('click',function(e){
         $(".lotus-image-container").lotusImageCrop('decreaseZoom')
         e.preventDefault();
-    })
-                        </code>
-                    </pre>
+        })</code></pre>
+                    </div>
                 </div>
 
                 <div class="section">
