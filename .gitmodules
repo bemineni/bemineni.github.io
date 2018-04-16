@@ -6,4 +6,4 @@
 	url = https://github.com/bemineni/lotus-select.git
 [submodule "lotus-naga"]
 	path = lotus-naga
-	url = git@github.com:bemineni/lotus-naga.git
+	url = https://github.com/bemineni/lotus-naga.git
