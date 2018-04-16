@@ -1,0 +1,122 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Lotus Naga</title>
+        <meta name="description" content="Srikanth Bemineni bemineni.github.io">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="apple-touch-icon" href="icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="../../css/normalize.css">
+        <link rel="stylesheet" href="../../css/main.css">
+        <link rel="stylesheet" href="../../css/carousel.css">
+        <link rel="stylesheet" href="../../css/bemineni.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+        <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.12.0/build/styles/default.min.css"> -->
+        <link rel="stylesheet" href="../../css/monokai-sublime.css">
+    </head>
+    <body>
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <header>
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                <a class="navbar-brand" href="https://bemineni.github.io">Srikanth Bemineni</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="https://bemineni.github.io">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://bemineni.github.io/about_me.html">About me</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main role="main">
+            
+            <div class="container project">
+                <div class="section">
+                    <h2>Lotus Naga</h2>
+                    <hr class="divider">
+                    <p>I still have memories of playing this game in college backbenches. Never thought of developing this game until last week.  It took me two days and just 400 lines of code to write the whole game using HTML Canvas and Javascript. My take on the first mobile game that I played.</p>
+                    <label>Settings</label>
+                    <ul>
+                        <li>refresh_interval - Increases the speed [600]</li>
+                        <li>num_unit_matrix - The snake screen matrix [50]</li>
+                        <li>width - The snake screen matrix [500]</li>
+                        <li>height - The snake screen matrix [500]</li>
+                    </ul>
+
+                    <pre>
+                        <code class="html rounded">&lt;div id=&quot;naga-game&quot;&gt;
+&lt;/div&gt;
+                        </code>
+                    </pre>
+
+                    <pre>
+                        <code class="javascript rounded">
+$('#naga-game').naga({'width':500, 'height':500});
+                        </code>
+                    </pre>
+                </div>
+                <div class="section">
+                    <h3>Demo</h3>
+                    <hr class="divider">
+                    <label> Click/Focus the game window and press space to start the game </label>
+                    <div id="naga-game" style="margin: 10px auto 0 auto;">
+
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3> Where can I find the code ? </h3>
+                    <hr class="divider">
+                    <p> On Github - <a href="https://github.com/bemineni/lotus-naga">Lotus Naga</a></p>
+                </div>
+            </div>
+            
+            <!-- FOOTER -->
+            <footer class="container footer-styles">
+                <p class="float-right"><a href="#">Back to top</a></p>
+                <p>&copy; 2018 - .... Srikanth Bemineni, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+             </footer>
+        </main>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script src="../../js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="../../lotus-naga/src/naga.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('pre code').each(function(i, block) {
+                    hljs.highlightBlock(block);
+                });
+
+                $('#naga-game').naga({'width':500, 'height':500});
+            });
+
+
+        </script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+
+        <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+        <script>
+            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+            ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
+        </script>
+        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+    </body>
+</html>
