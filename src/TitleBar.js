@@ -13,7 +13,8 @@ const useStyle = makeStyles({
       paddingLeft:"5px"
     },
     menuItem:{
-      paddingRight:"15px"
+      paddingRight:"15px",
+      color:"#AEB4A7"
     },
     lotusItem:{
       display:"block",
@@ -30,7 +31,7 @@ const useStyle = makeStyles({
 function TitleBar() {
     const classes = useStyle()
     return (
-        <AppBar position="sticky">
+        <AppBar position="sticky" elevation={0}>
             <Grid container className={classes.groot} alignItems="center" wrap="nowrap">
             <Grid item>
               <img className={classes.lotusItem} src={Lotus} alt="Lotus" />
@@ -44,8 +45,8 @@ function TitleBar() {
                 <Grid item component="span" className={classes.menuItem}>Help</Grid>
               </Grid>
             </Grid>
-            <Grid item xs={6} >
-                /home/Srikanth_Bemineni.pro
+            <Grid item xs={6}>
+                /home/Srikanth_Bemineni.pro - bemineni.github.io
             </Grid>
             <Grid item xs={2}>
               <Grid container justify="flex-end" className={classes.controls}>
