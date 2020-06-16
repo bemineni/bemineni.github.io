@@ -1,7 +1,7 @@
 import React from 'react';
 import Box from '@material-ui/core/Box';
 import { makeStyles } from '@material-ui/core/styles';
-import { titlebarHeight } from "./siteDefaults"
+import { titlebarHeight, statusbarHeight, LeftbarWidth } from "./siteDefaults"
 import LibraryBooksIcon from '@material-ui/icons/LibraryBooks';
 import SearchIcon from '@material-ui/icons/Search';
 import DeviceHubIcon from '@material-ui/icons/DeviceHub';
@@ -16,10 +16,10 @@ const useStyle = makeStyles({
       position:"fixed",
       backgroundColor: "#252526", 
       color: "black", 
-      height:`calc(100% - ${titlebarHeight})`, 
+      height:`calc(100% - ${titlebarHeight} - ${statusbarHeight})`, 
       top: titlebarHeight,
       left: 0,
-      width: "25%"
+      width: LeftbarWidth
     },
     flexContainerRoot:{
       height:"100%"
