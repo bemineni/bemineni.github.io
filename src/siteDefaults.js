@@ -1,5 +1,5 @@
-export const titlebarHeight ="32px";
+export const titlebarHeight = "32px";
 
-export const statusbarHeight ="25px";
+export const statusbarHeight = "22px";
 
-export const LeftbarWidth = "20%"
+export const LeftbarWidth = "20%";
