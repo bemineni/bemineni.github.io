@@ -30,7 +30,7 @@ const useStyle = makeStyles({
 function TitleBar() {
   const classes = useStyle();
   return (
-    <AppBar position="sticky" elevation={0}>
+    <AppBar position="fixed" elevation={0}>
       <Grid container className={classes.groot} alignItems="center" wrap="nowrap">
         <Grid item>
           <img className={classes.lotusItem} src={Lotus} alt="Lotus" />
