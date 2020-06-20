@@ -32,7 +32,7 @@ const useStyle = makeStyles({
   },
   iconRoot: {
     display: "block",
-    fontSize: 25,
+    fontSize: "2em",
     color: "#858585",
     marginBottom: "70%",
   },

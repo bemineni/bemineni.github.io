@@ -8,6 +8,8 @@ import TitleBar from "./TitleBar";
 import StatusBar from "./StatusBar";
 import LeftBar from "./LeftBar";
 import LotusImageCrop from "./LotusImageCrop";
+import LotusNaga from "./LotusNaga";
+import LotusSelect from "./LotusSelect";
 
 const useStyle = makeStyles((theme) => ({
   root: {
@@ -33,7 +35,7 @@ function Project({ match }) {
       <TitleBar />
       <LeftBar option={match.params.id} />
       <Box className={classes.rightRoot}>
-        <LotusImageCrop />
+        <LotusSelect />
       </Box>
       <StatusBar />
     </Container>

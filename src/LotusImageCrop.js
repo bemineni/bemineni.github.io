@@ -122,7 +122,17 @@ function LotusImageCrop() {
         Using it in a React application
       </Typography>
       <Highlight language="javascript">
-        {` function Component1() {
+        {`//Install and set jQuery
+//npm install --save jquery
+import jquery from "jquery";
+window.$ = window.jQuery = jquery;
+
+//Use require instead of import
+require("../lotus-imagecrop/src/lotusimagecrop");
+
+import "../lotus-imagecrop/stylesheet/lotusimagecrop.css";
+
+function Component1() {
   const liref = React.createRef();
   useEffect(() => {
     $(liref.current).lotusImageCrop({
