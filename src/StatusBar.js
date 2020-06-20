@@ -15,9 +15,9 @@ import pkgjson from "../package.json";
 
 function Copyright() {
   return (
-    <Typography variant="body2" color="textSecondary" align="center">
+    <Typography variant="body2" style={{ color: "#ffffff" }} align="center">
       {"Copyright © "}
-      <Link color="inherit" href="https://bemineni.github.io">
+      <Link style={{ color: "#ffffff" }} href="https://bemineni.github.io">
         bemineni.github.io
       </Link>{" "}
       {new Date().getFullYear()}
