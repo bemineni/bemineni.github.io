@@ -3,13 +3,10 @@ import Container from "@material-ui/core/Container";
 import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
-import { statusbarHeight, LeftbarWidth, titlebarHeight } from "./siteDefaults";
+import { statusbarHeight, LeftbarWidth, titlebarHeight, getComponent } from "./siteDefaults";
 import TitleBar from "./TitleBar";
 import StatusBar from "./StatusBar";
 import LeftBar from "./LeftBar";
-import LotusImageCrop from "./LotusImageCrop";
-import LotusNaga from "./LotusNaga";
-import LotusSelect from "./LotusSelect";
 
 const useStyle = makeStyles((theme) => ({
   root: {
@@ -28,18 +25,20 @@ const useStyle = makeStyles((theme) => ({
   },
 }));
 
-function Project({ match }) {
+function VSCode({ match }) {
   const classes = useStyle();
+  const Comp = getComponent(match.url);
+
   return (
     <Container className={classes.root} maxWidth={false}>
       <TitleBar />
-      <LeftBar option={match.params.id} />
+      <LeftBar option={match.url} />
       <Box className={classes.rightRoot}>
-        <LotusSelect />
+        <Comp />
       </Box>
       <StatusBar />
     </Container>
   );
 }
 
-export default Project;
+export default VSCode;

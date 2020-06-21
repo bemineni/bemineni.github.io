@@ -1,17 +1,21 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Project from "./Project";
+import { HashRouter as Router, Switch, Route } from "react-router-dom";
+import VSCode from "./VSCode";
 import "./App.css";
-
-//<Route path="/blog/:id" component={Blog} />
-//<Route path="/readme" component={Readme} />
 
 function App() {
   return (
     <Router>
-      <Switch>
-        <Route path="/" component={Project} />
-      </Switch>
+      <div>
+        <Switch>
+          <Route path="/src/:id" component={VSCode} />
+          <Route path="/src" component={VSCode} />
+          <Route path="/readme" component={VSCode} />
+          <Route path="/public/:id" exact component={VSCode} />
+          <Route path="/public" exact component={VSCode} />
+          <Route exact path="/" exact component={VSCode} />
+        </Switch>
+      </div>
     </Router>
   );
 }

@@ -1,15 +1,13 @@
-import React from "react";
+import React, { useDebugValue } from "react";
 import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
 import TreeView from "@material-ui/lab/TreeView";
 import TreeItem from "@material-ui/lab/TreeItem";
 import Typography from "@material-ui/core/Typography";
-import Label from "@material-ui/icons/Label";
 import KeyboardArrowRightIcon from "@material-ui/icons/KeyboardArrowRight";
 import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
-import ElasticPNG from "./assets/elasticsearch.png";
-import HTML5PNG from "./assets/html5.png";
-import JavascriptPNG from "./assets/javascript.png";
+import { structure } from "./siteDefaults";
+import { useHistory } from "react-router-dom";
 
 const useTreeItemStyles = makeStyles((theme) => ({
   root: {
@@ -111,30 +109,39 @@ const useStyles = makeStyles({
 
 export default function BTreeView() {
   const classes = useStyles();
+  const history = useHistory();
 
   function onSelect(e, value) {
-    console.log(value);
+    history.push(value);
   }
 
   return (
     <TreeView
       className={classes.root}
-      defaultExpanded={["3"]}
+      defaultExpanded={Object.keys(structure).map((key, index) => "/" + key)}
       defaultCollapseIcon={<KeyboardArrowDownIcon />}
       defaultExpandIcon={<KeyboardArrowRightIcon />}
       defaultEndIcon={<KeyboardArrowRightIcon />}
       multiSelect={false}
       onNodeSelect={onSelect}
     >
-      <StyledTreeItem nodeId="1" labelText="app" />
-      <StyledTreeItem nodeId="2" labelText="dist" />
-      <StyledTreeItem nodeId="3" labelText="src">
-        <StyledTreeItem nodeId="5" labelText="Lotus Image crop" labelIcon={JavascriptPNG} labelInfo="JS" />
-        <StyledTreeItem nodeId="6" labelText="Lotus Naga" labelIcon={JavascriptPNG} labelInfo="JS" />
-        <StyledTreeItem nodeId="7" labelText="Lotus Select" labelIcon={JavascriptPNG} labelInfo="JS" />
-        <StyledTreeItem nodeId="8" labelText="Promotions" labelIcon={ElasticPNG} labelInfo="733" />
-      </StyledTreeItem>
-      <StyledTreeItem nodeId="4" labelText="History" labelIcon={Label} />
+      {Object.entries(structure).map(([key, value]) => {
+        return (
+          <StyledTreeItem key={key} nodeId={"/" + key} labelText={value.name}>
+            {value.items.map((i, index) => {
+              return (
+                <StyledTreeItem
+                  key={key + i.url}
+                  nodeId={"/" + key + "/" + i.url}
+                  labelText={i.name}
+                  labelIcon={i.icon}
+                  labelInfo={i.type}
+                />
+              );
+            })}
+          </StyledTreeItem>
+        );
+      })}
     </TreeView>
   );
 }
