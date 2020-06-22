@@ -7,7 +7,8 @@ import Brightness1Icon from "@material-ui/icons/Brightness1";
 import { titlebarHeight } from "./siteDefaults";
 
 const useStyle = makeStyles({
-  groot: { backgroundColor: "#323233", height: titlebarHeight },
+  appBarRoot: { height: titlebarHeight, minHeight: titlebarHeight },
+  groot: { backgroundColor: "#323233", height: "100%" },
   gmenuRoot: {
     paddingLeft: "5px",
   },
@@ -30,7 +31,7 @@ const useStyle = makeStyles({
 function TitleBar() {
   const classes = useStyle();
   return (
-    <AppBar position="fixed" elevation={0}>
+    <AppBar className={classes.appBarRoot} position="fixed" elevation={0}>
       <Grid container className={classes.groot} alignItems="center" wrap="nowrap">
         <Grid item>
           <img className={classes.lotusItem} src={Lotus} alt="Lotus" />

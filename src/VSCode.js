@@ -3,10 +3,11 @@ import Container from "@material-ui/core/Container";
 import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
-import { statusbarHeight, LeftbarWidth, titlebarHeight, getComponent } from "./siteDefaults";
+import { statusbarHeight, LeftbarWidth, titlebarHeight, getComponent, tabbarHeight } from "./siteDefaults";
 import TitleBar from "./TitleBar";
 import StatusBar from "./StatusBar";
 import LeftBar from "./LeftBar";
+import TabBar from "./TabBar";
 
 const useStyle = makeStyles((theme) => ({
   root: {
@@ -17,7 +18,7 @@ const useStyle = makeStyles((theme) => ({
   rightRoot: {
     backgroundColor: "#1e1e1e",
     color: "#ebebeb",
-    marginTop: titlebarHeight,
+    marginTop: `calc(${titlebarHeight} + ${tabbarHeight})`,
     marginLeft: LeftbarWidth,
     marginBottom: statusbarHeight,
     padding: "1%",
@@ -32,7 +33,8 @@ function VSCode({ match }) {
   return (
     <Container className={classes.root} maxWidth={false}>
       <TitleBar />
-      <LeftBar option={match.url} />
+      <LeftBar url={match.url} />
+      <TabBar url={match.url} />
       <Box className={classes.rightRoot}>
         <Comp />
       </Box>

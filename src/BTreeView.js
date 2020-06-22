@@ -107,7 +107,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function BTreeView() {
+const BTreeView = (props) => {
   const classes = useStyles();
   const history = useHistory();
 
@@ -124,6 +124,7 @@ export default function BTreeView() {
       defaultEndIcon={<KeyboardArrowRightIcon />}
       multiSelect={false}
       onNodeSelect={onSelect}
+      defaultSelected={[props.url]}
     >
       {Object.entries(structure).map(([key, value]) => {
         return (
@@ -144,4 +145,6 @@ export default function BTreeView() {
       })}
     </TreeView>
   );
-}
+};
+
+export default BTreeView;

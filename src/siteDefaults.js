@@ -16,16 +16,18 @@ import { useHistory } from "react-router-dom";
 
 export const titlebarHeight = "32px";
 
-export const statusbarHeight = "22px";
+export const statusbarHeight = "20px";
 
 export const LeftbarWidth = "20%";
+
+export const tabbarHeight = "55px";
 
 export const structure = {
   public: {
     name: "public",
     default: 1,
     component: null,
-    items: [{ name: "index.html", type: "HTML", url: "indexhtml", icon: HTML5PNG, component: IndexHTML }],
+    items: [{ name: "index.html", type: "HTML", url: "index", icon: HTML5PNG, component: IndexHTML }],
   },
   src: {
     name: "src",
@@ -48,7 +50,6 @@ export const structure = {
 
 export function getComponent(url) {
   const res = url.split("/").filter(String);
-  console.log(res);
   if (res.length > 0 && res.length <= 2) {
     const keys = Object.keys(structure);
     for (const i of keys) {
@@ -71,5 +72,26 @@ export function getComponent(url) {
     }
   } else {
     return structure["public"].items[0].component;
+  }
+}
+
+export function getItem(url) {
+  const res = url.split("/").filter(String);
+  if (res.length > 0 && res.length <= 2) {
+    const keys = Object.keys(structure);
+    for (const i of keys) {
+      if (i === res[0].trim()) {
+        if (res.length == 1) {
+          return structure[i];
+        }
+        for (const j of structure[i].items) {
+          if (j.url === res[1].trim()) {
+            return j;
+          }
+        }
+      }
+    }
+  } else {
+    return structure["public"].items[0];
   }
 }

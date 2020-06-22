@@ -41,8 +41,7 @@ const useStyle = makeStyles({
   },
 });
 
-function LeftBar({ props }) {
-  console.log(props);
+const LeftBar = (props) => {
   const classes = useStyle();
   return (
     <Box className={classes.root}>
@@ -56,11 +55,11 @@ function LeftBar({ props }) {
           <SlideshowIcon className={classes.iconRoot} />
         </Box>
         <Box className={classes.treeRoot}>
-          <BTreeView />
+          <BTreeView url={props.url} />
         </Box>
       </Box>
     </Box>
   );
-}
+};
 
 export default LeftBar;
