@@ -21,7 +21,7 @@ const useStyle = makeStyles((theme) => ({
   tabRoot: {
     height: "60%",
     paddingTop: "5px",
-    paddingLeft: "7px",
+    paddingLeft: "10px",
     paddingRight: "7px",
     paddingBottom: "5px",
     borderBottom: "1px solid #80cbc4",
@@ -29,7 +29,7 @@ const useStyle = makeStyles((theme) => ({
   breadRoot: {
     height: "40%",
     marginTop: "3px",
-    paddingLeft: "7px",
+    paddingLeft: "10px",
     paddingRight: "7px",
     borderRight: "1px solid #333333",
   },
