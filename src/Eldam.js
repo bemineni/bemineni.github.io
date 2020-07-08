@@ -9,7 +9,7 @@ import Highlight from "react-highlight";
 
 const useStyle = makeStyles((theme) => ({
   dividerColor: {
-    backgroundColor: "#ebebeb",
+    backgroundColor: theme.palette.dividerColor.main,
     marginBottom: theme.spacing(1),
   },
   iconRoot: {
@@ -33,20 +33,16 @@ function Eldam() {
   return (
     <div>
       <Typography variant="h4" gutterBottom>
-        Lotus Select
+        ELDAM
       </Typography>
       <Divider className={classes.dividerColor} />
       <Typography variant="body1" paragraph>
-        Lotus select is a nice replacement for the html select. It adds some benefits over the regular select element.
+        Elasticsearch data manager (ELDAM) with zope transaction support. Other transaction data manager like sqlalchemy
+        use the database atomic operation feature to rollback if an error occurs during the commit process. This is not
+        achievable in elastic search. To overcome this eldam finalizes the records in the commit call of the two-phase
+        transaction process. At the same time takes backup of the existing data in the index, if it involves removing or
+        updating a record.
       </Typography>
-      <ul>
-        <li>
-          One thing that I always hated with select was the space. It always takes longest element space on the
-          document. With this new select plugin the space is restricted to the option item that is displayed.
-        </li>
-        <li>We have lot of options to change the settings.</li>
-        <li>User can search through the list of options.</li>
-      </ul>
       <Typography>
         Code on GitHub
         <IconButton
@@ -54,7 +50,7 @@ function Eldam() {
           component="span"
           className={classes.iconRoot}
           onClick={() => {
-            location.href = "https://github.com/bemineni/lotus-naga";
+            location.href = "https://github.com/bemineni/eldam";
           }}
         >
           <GitHubIcon />
@@ -62,48 +58,14 @@ function Eldam() {
       </Typography>
 
       <Typography variant="h5" gutterBottom>
-        How to use it?
+        How to install?
       </Typography>
       <Divider className={classes.dividerColor} />
       <Typography variant="body1" gutterBottom>
-        Using it in a React application
+        eldam is only supported on python 3.x
       </Typography>
-      <Highlight language="javascript">
-        {`//Install and set jQuery
-//npm install --save jquery
-import jquery from "jquery";
-window.$ = window.jQuery = jquery;
+      <Highlight language="bash">{`pip install eldam`}</Highlight>
 
-//Use require instead of import
-require("../lotus-naga/src/naga");
-
-
-function Component1() {
-  const lnref = React.createRef();
-  useEffect(() => {
-    $(lnref.current).naga({ width: 500, height: 500 });
-  });
-
-  return (
-    <div id="naga-game" ref={lnref}></div>
-    </div>
-  );
-}`}
-      </Highlight>
-      <Typography variant="body1" gutterBottom>
-        HTML
-      </Typography>
-      <Highlight language="javascript">
-        {`<div id="naga-game">
-</div>`}
-      </Highlight>
-      <Typography variant="body1" gutterBottom>
-        jQuery Plugin usage
-      </Typography>
-      <Highlight language="javascript">{`$('#cars').Eldam();`}</Highlight>
-      <Typography variant="h5" gutterBottom>
-        Demo
-      </Typography>
       <Divider className={classes.dividerColor} />
     </div>
   );

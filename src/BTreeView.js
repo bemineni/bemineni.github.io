@@ -115,6 +115,12 @@ const BTreeView = (props) => {
     history.push(value);
   }
 
+  let url = props.url;
+  if (props.url === "/") {
+    url = "/public/index";
+  }
+
+  console.log("rendering");
   return (
     <TreeView
       className={classes.root}
@@ -124,7 +130,7 @@ const BTreeView = (props) => {
       defaultEndIcon={<KeyboardArrowRightIcon />}
       multiSelect={false}
       onNodeSelect={onSelect}
-      defaultSelected={[props.url]}
+      selected={[url]}
     >
       {Object.entries(structure).map(([key, value]) => {
         return (

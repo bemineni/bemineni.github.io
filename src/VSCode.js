@@ -12,12 +12,12 @@ import TabBar from "./TabBar";
 const useStyle = makeStyles((theme) => ({
   root: {
     padding: 0,
-    color: "#ebebeb",
+    color: "#e2e2e2",
     height: "100vh",
   },
   rightRoot: {
-    backgroundColor: "#1e1e1e",
-    color: "#ebebeb",
+    backgroundColor: "#292d3e",
+    color: "#e2e2e2",
     marginTop: `calc(${titlebarHeight} + ${tabbarHeight})`,
     marginLeft: LeftbarWidth,
     marginBottom: statusbarHeight,

@@ -16,7 +16,7 @@ require("../lotus-select/src/lotusselect.js");
 
 const useStyle = makeStyles((theme) => ({
   dividerColor: {
-    backgroundColor: "#ebebeb",
+    backgroundColor: theme.palette.dividerColor.main,
     marginBottom: theme.spacing(1),
   },
   iconRoot: {

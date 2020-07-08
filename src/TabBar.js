@@ -14,7 +14,7 @@ const useStyle = makeStyles((theme) => ({
     height: tabbarHeight,
   },
   groot: {
-    backgroundColor: "#1e1e1e",
+    backgroundColor: "#292d3e",
     height: "100%",
     borderBottom: "1px solid #222222",
   },
@@ -35,11 +35,11 @@ const useStyle = makeStyles((theme) => ({
   },
   typoRoot: {
     fontSize: 14,
-    color: "#777777",
+    color: "#999999",
   },
   BreadcrumbTypoRoot: {
     fontSize: 13,
-    color: "#777777",
+    color: "#999999",
   },
   BreadcrumbItem: {
     marginLeft: "6px",
@@ -53,8 +53,12 @@ const useStyle = makeStyles((theme) => ({
 
 const TabBar = (props) => {
   const classes = useStyle();
-  const res = props.url.split("/").filter(String);
-  const item = getItem(props.url);
+  let url = props.url;
+  if (props.url === "/") {
+    url = "/public/index";
+  }
+  const res = url.split("/").filter(String);
+  const item = getItem(url);
 
   let LabelIcon = UnknownPNG;
   if (item && "icon" in item) {

@@ -8,7 +8,7 @@ import { titlebarHeight } from "./siteDefaults";
 
 const useStyle = makeStyles({
   appBarRoot: { height: titlebarHeight, minHeight: titlebarHeight },
-  groot: { backgroundColor: "#323233", height: "100%" },
+  groot: { backgroundColor: "#1b1e2b", height: "100%" },
   gmenuRoot: {
     paddingLeft: "5px",
   },

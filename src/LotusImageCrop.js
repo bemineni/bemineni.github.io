@@ -21,7 +21,7 @@ require("../lotus-imagecrop/src/lotusimagecrop");
 
 const useStyle = makeStyles((theme) => ({
   dividerColor: {
-    backgroundColor: "#ebebeb",
+    backgroundColor: theme.palette.dividerColor.main,
     marginBottom: theme.spacing(1),
   },
   iconRoot: {

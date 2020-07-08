@@ -13,12 +13,13 @@ import BTreeView from "./BTreeView";
 const useStyle = makeStyles({
   root: {
     position: "fixed",
-    backgroundColor: "#252526",
+    backgroundColor: "#1b1e2b",
     color: "black",
     height: `calc(100% - ${titlebarHeight} - ${statusbarHeight})`,
     top: titlebarHeight,
     left: 0,
     width: LeftbarWidth,
+    borderRight: "1px solid #222222",
   },
   flexContainerRoot: {
     height: "100%",
@@ -27,8 +28,9 @@ const useStyle = makeStyles({
     width: "12%",
     maxWidth: "12%",
     height: "100%",
-    backgroundColor: "#333333",
+    backgroundColor: "#1b1e2b",
     padding: "2%",
+    border: "1px solid #11131b",
   },
   iconRoot: {
     display: "block",

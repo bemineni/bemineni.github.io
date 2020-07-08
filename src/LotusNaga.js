@@ -18,7 +18,7 @@ require("../lotus-naga/src/naga");
 
 const useStyle = makeStyles((theme) => ({
   dividerColor: {
-    backgroundColor: "#4e4e50",
+    backgroundColor: theme.palette.dividerColor.main,
     marginBottom: theme.spacing(1),
   },
   iconRoot: {

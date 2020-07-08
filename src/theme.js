@@ -20,6 +20,9 @@ const theme = createMuiTheme({
     swhite: {
       main: "#ffffff",
     },
+    dividerColor: {
+      main: "#5B5B5B",
+    },
   },
 });
 
