@@ -7,7 +7,7 @@ import Typography from "@material-ui/core/Typography";
 import { Box, Link, Divider, Button } from "@material-ui/core";
 import DescriptionIcon from "@material-ui/icons/Description";
 import ElasticSearchPNG from "./assets/elasticsearch.png";
-import JavascriptPNG from "./assets/Javascript.png";
+import JavascriptPNG from "./assets/java_script.png";
 
 const useStyle = makeStyles((theme) => ({
   large: {

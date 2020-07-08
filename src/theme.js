@@ -4,6 +4,15 @@ import { createMuiTheme } from "@material-ui/core/styles";
 
 // A custom theme for this app
 const theme = createMuiTheme({
+  MuiTable: {
+    shadows: ["none"],
+  },
+  MuiTableContainer: {
+    shadows: ["none"],
+  },
+  Paper: {
+    shadows: ["none"],
+  },
   palette: {
     primary: {
       main: "#556cd6",

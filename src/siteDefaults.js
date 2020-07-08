@@ -10,7 +10,7 @@ import ReadMe from "./ReadMe";
 //Images
 import ElasticPNG from "./assets/elasticsearch.png";
 import HTML5PNG from "./assets/html5.png";
-import JavascriptPNG from "./assets/javascript.png";
+import JavascriptPNG from "./assets/java_script.png";
 
 import { useHistory } from "react-router-dom";
 

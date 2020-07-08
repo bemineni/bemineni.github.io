@@ -1,11 +1,12 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles, withStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Avatar from "@material-ui/core/Avatar";
 import Box from "@material-ui/core/Box";
 import ProfilePNG from "./assets/profile.png";
 import Paper from "@material-ui/core/Paper";
-import { Grid } from "@material-ui/core";
+import { Grid, TableCell, Divider } from "@material-ui/core";
+import { shadows } from "@material-ui/system";
 
 import Timeline from "@material-ui/lab/Timeline";
 import TimelineItem from "@material-ui/lab/TimelineItem";
@@ -21,6 +22,12 @@ import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
+
+import Table from "@material-ui/core/Table";
+import TableBody from "@material-ui/core/TableBody";
+import TableContainer from "@material-ui/core/TableContainer";
+import TableHead from "@material-ui/core/TableHead";
+import TableRow from "@material-ui/core/TableRow";
 
 const resume = [
   {
@@ -175,10 +182,75 @@ const resume = [
   },
 ];
 
+const skills = [
+  {
+    skill: "Programming Languages",
+    description: "C, C++, Java, Python",
+  },
+  {
+    skill: "Web",
+    description: "HTML5, CSS3, SASS, Compass",
+  },
+  {
+    skill: "Scripting languages",
+    description: "JavaScript, Python, Shell scripting and Windows BAT scripting",
+  },
+  {
+    skill: "Operating Systems",
+    description: "Linux (RHEL, SUSE, Ubuntu and my favorite Mint), OS X, UNIX, Windows",
+  },
+  {
+    skill: "VCS Tools ",
+    description: "Git and SVN",
+  },
+  {
+    skill: "SDK’s / Frameworks/libraries",
+    description: "STL, QT C++ SDK from Digia, React, Grommet, Material UI, Flask, Pyramid, Celery, SQLAlchemy",
+  },
+  {
+    skill: "IDE",
+    description: "Vim, Sublime, Visual Studio Code, and Eclipse.",
+  },
+  {
+    skill: "Search Engine",
+    description: "Elastic Search",
+  },
+  {
+    skill: "In-Memory database",
+    description: "RocksDB and Redis",
+  },
+  {
+    skill: "Database",
+    description: "MongoDB and CouchDB",
+  },
+  {
+    skill: "NoSQL",
+    description: "SQLite and MySQL",
+  },
+  {
+    skill: "Cloud Platform",
+    description: "AWS and GCP",
+  },
+];
+
+const StyledTableCell = withStyles((theme) => ({
+  root: {
+    borderBottomColor: "#292d3e",
+  },
+  head: {
+    color: theme.palette.common.white,
+    fontWeight: "700",
+  },
+  body: {
+    color: theme.palette.common.white,
+  },
+}))(TableCell);
+
 const useStyle = makeStyles((theme) => ({
   dividerColor: {
-    backgroundColor: theme.palette.dividerColor.main,
+    backgroundColor: "#222222",
     marginBottom: theme.spacing(1),
+    marginTop: theme.spacing(1),
   },
   nameLabel: {
     wordSpacing: "4px",
@@ -199,6 +271,10 @@ const useStyle = makeStyles((theme) => ({
     backgroundColor: "#1e1e1e",
     color: "#ffffff",
   },
+  table: {
+    backgroundColor: "#292d3e",
+    color: "#ffffff",
+  },
 }));
 
 function ReadMe() {
@@ -210,7 +286,7 @@ function ReadMe() {
         <Grid item xs={10}>
           <Grid container justify="center" direction="column" className={classes.tile}>
             <Typography variant="h4" className={classes.nameLabel}>
-              <Box letterSpacing={3} m={1}>
+              <Box letterSpacing={3} m={1} fontWeight="fontWeightBold">
                 Srikanth Bemineni
               </Box>
             </Typography>
@@ -226,21 +302,91 @@ function ReadMe() {
         </Grid>
       </Grid>
 
+      <Divider className={classes.dividerColor} />
+
+      <Typography variant="h5" className={classes.nameLabel}>
+        <Box m={1} lineHeight={2} fontWeight="fontWeightBold">
+          Education and skills
+        </Box>
+      </Typography>
+
+      <Typography variant="subtitle1">
+        <Box mb={1} ml={1} lineHeight={2}>
+          Bachelor of Engineering (Computer Science). Visveshwariah Technological University Belgaum KA
+        </Box>
+      </Typography>
+      <Typography variant="subtitle1">
+        <Box mb={1} ml={1} lineHeight={2}>
+          Qt certification from ICS (Integrated Computer Solutions), Hewlett Packard, 2010
+        </Box>
+      </Typography>
+      <Typography variant="subtitle1">
+        <Box mb={1} ml={1} lineHeight={2}>
+          HPE Leadership development program a one-year internal Hewlett Packard course. June 2020
+        </Box>
+      </Typography>
+      <Typography variant="subtitle1">
+        <Box mb={3} ml={1} lineHeight={2}>
+          Docker and Kubernetes course on Udemy
+        </Box>
+      </Typography>
+
+      <Grid container>
+        <Grid item xs={6}>
+          <TableContainer component={Paper} className={classes.table} elevation={0}>
+            <Table className={classes.table} aria-label="simple table" size="small">
+              <TableHead>
+                <TableRow>
+                  <StyledTableCell>
+                    <Typography component="div" variant="body1">
+                      <Box fontWeight="fontWeightBold">Technology</Box>
+                    </Typography>
+                  </StyledTableCell>
+                  <StyledTableCell>
+                    <Typography component="div" variant="body1">
+                      <Box fontWeight="fontWeightBold">Description</Box>
+                    </Typography>
+                  </StyledTableCell>
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                {skills.map((item, index) => (
+                  <TableRow key={index}>
+                    <StyledTableCell component="th">
+                      <Typography component="div" variant="body1">
+                        <Box fontWeight="fontWeightRegular">{item.skill}</Box>
+                      </Typography>
+                    </StyledTableCell>
+                    <StyledTableCell>
+                      <Typography component="div" variant="body1">
+                        <Box fontWeight="fontWeightRegular">{item.description}</Box>
+                      </Typography>
+                    </StyledTableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </TableContainer>
+        </Grid>
+      </Grid>
+
+      <Divider className={classes.dividerColor} />
+
       <Timeline align="alternate">
         {resume.map((item, idx1) => (
           <TimelineItem key={idx1}>
             <TimelineOppositeContent>
               <Paper elevation={3} className={classes.paperRight}>
-                <Typography component="div">
+                <Typography component="div" variant="body1">
                   <Box fontWeight="fontWeightBold">{item.role}</Box>
                 </Typography>
-                <Typography component="div">
+                <Typography component="div" variant="body1">
                   <Box fontWeight="fontWeightRegular">{item.companyName}</Box>
                 </Typography>
-                <Typography component="div">
+                <Typography component="div" variant="body1">
                   <Box fontWeight="fontWeightRegular">{item.companyDescription}</Box>
                 </Typography>
-                <Typography component="div">
+                <Typography component="div" variant="body1">
                   <Box fontWeight="fontWeightBold" mt={1}>
                     {item.dateFrom} - {item.dateTo}
                   </Box>
@@ -255,17 +401,17 @@ function ReadMe() {
             </TimelineSeparator>
             <TimelineContent>
               <Paper elevation={3} className={classes.paperLeft}>
-                <Typography variant="title" className={classes.title}>
-                  {item.projectDescription}
+                <Typography className={classes.title} component="div" variant="body1">
+                  <Box>{item.projectDescription}</Box>
                 </Typography>
                 <div className={classes.demo}>
                   <List dense={true}>
                     {item.tasks.map((item1, idx2) => (
-                      <ListItem alignItems="flex-start" disableGutters={true} dense={true}>
+                      <ListItem key={idx2} alignItems="flex-start" disableGutters={true} dense={true}>
                         <ListItemIcon>
                           <ArrowForwardIosIcon fontSize="small" style={{ color: "#ffffff" }} />
                         </ListItemIcon>
-                        <ListItemText primary={item1} />
+                        <ListItemText primary={<Box>{item1}</Box>} primaryTypographyProps={{ variant: "body1" }} />
                       </ListItem>
                     ))}
                   </List>
@@ -275,6 +421,16 @@ function ReadMe() {
           </TimelineItem>
         ))}
       </Timeline>
+
+      <Divider className={classes.dividerColor} />
+
+      <Typography component="div">
+        <Box fontWeight={700}>Patent-pending</Box>
+      </Typography>
+      <Typography>
+        SELECTING AND SENDING SUBSET OF COMPONENTS TO COMPUTING DEVICE PRIOR TO OPERATING SYSTEM INSTALL
+      </Typography>
+      <Divider className={classes.dividerColor} />
     </div>
   );
 }
