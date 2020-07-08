@@ -425,7 +425,9 @@ function ReadMe() {
       <Divider className={classes.dividerColor} />
 
       <Typography component="div">
-        <Box fontWeight={700}>Patent-pending</Box>
+        <Box mb={1} fontWeight={500}>
+          Patent-pending
+        </Box>
       </Typography>
       <Typography>
         SELECTING AND SENDING SUBSET OF COMPONENTS TO COMPUTING DEVICE PRIOR TO OPERATING SYSTEM INSTALL

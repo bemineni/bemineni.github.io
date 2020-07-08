@@ -11,6 +11,7 @@ import ReadMe from "./ReadMe";
 import ElasticPNG from "./assets/elasticsearch.png";
 import HTML5PNG from "./assets/html5.png";
 import JavascriptPNG from "./assets/java_script.png";
+import infoPNG from "./assets/info.png";
 
 import { useHistory } from "react-router-dom";
 
@@ -44,6 +45,7 @@ export const structure = {
     name: "README.md",
     default: 0,
     component: ReadMe,
+    icon: infoPNG,
     items: [],
   },
 };
