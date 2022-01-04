@@ -38,19 +38,22 @@ const resume = [
       "HPE is an American multinational enterprise information technology company based in San Jose, California. HPE business is focused on servers, storage, networking, consulting, and support.",
     dateFrom: "June 2019",
     dateTo: "till date",
-    role: "Solution Architect",
+    role: "OEM Solution Architect(Engineering Program Manager)",
     tasks: [
-      "Provide custom solutions with HPE ProLiant servers for OEM customers. The server and its related hardware and customized software are sold to the customers without any HPE branding or with OEM branding.",
-      "Studying customer RFP’s requests and building custom solution proposals.",
-      "Work with engineering teams to bring in new hardware when we don’t have a product similar to our competition",
-      "Give customer onboarding presentations and guide them technically to implement their ISV or solution on HPE platforms.",
-      "Provide Converged infrastructure solutions with HPE Synergy, and Hyper-Converged Infrastructure solutions with Nutanix based HPE Proliant DX and Simplivity servers. HCI solutions also included software-defined networking based on HPE composable fabric or VMware NSX-T.",
-      "I lead a team of 5 developers to modify HPE proprietary software for OEM customer needs. This includes custom functionality and changing the design on top of HPE functionality to suit OEM customer needs.",
-      "I have worked with customers to resolve their HPE technical and design issues and foster relationships.",
-      "I worked with engineering teams at HPE to guide future server design to suit customer needs. One of the recommendations from me was to design future servers with OCP3 based connectors and 3G LTE/Wifi support in HPE IoT centric EdgelLine servers.",
-      "I have worked on providing software-defined storage platforms solutions with vSAN and Ceph.",
-      "OEM team representative for Infrastructure as a Service(HPE GreenLake) panel.",
-      "I worked with many OTT media platforms, Healthcare, Telcom, Data backup, Aerospace electronics, Cloud service providers, and Industrial automation equipment providing customers.",
+      "Provide custom architected solutions for our HPE OEM customers, built proof of concepts for customer solutions",
+      "New OEM customer induction. Meet them to introduce HPE OEM products and services. I worked on many RFP for multiple opportunities.",
+      "Participated in presales activity about HPE products and OEM offering to CTO’s and principal architects",
+      "Technically engage with our OEM customers with their issues. Help their engineers to make sure that their solution gets implemented on our platform.",
+      "Work with customers to implement Python Redfish, RAID controllers optimization, NIC configuration, and other HPE hardware settings tailored to their software stack.",
+      "I managed customer solution qualification assignments for team members in US and India and tracked them to completion.",
+      "I suggest customers with their software and firmware update strategies. This depends on how the update process has to be done in data centers or at their customer sites.",
+      "Participate in future HPE platform architecture to align with OEM customer requirements.",
+      "Participated in QBR and analyze customer report cards on quarterly performance.",
+      "Helped customers to move to Microservice architecture using Kubernetes and HPE Ezemeral.",
+      "Worked with customers to convert their Monolith to Kubernetes Microservices along with HPE Nimble storage integration for persistent volume.",
+      "I worked with customers to migrate to HCI-based solutions like Nutanix, VMware vSAN, and Simplivity.",
+      "Helped customers move to HPE GreenLake and Hybrid On-prem and public cloud technologies.",
+      "I worked with many OTT media platforms, Healthcare, Telcom, Data backup, Aerospace, Cloud service providers, and Industrial automation equipment providing customers."
     ],
   },
   {
@@ -205,7 +208,7 @@ const skills = [
   },
   {
     skill: "SDK’s / Frameworks/libraries",
-    description: "STL, QT C++ SDK from Digia, React, Grommet, Material UI, Flask, Pyramid, Celery, SQLAlchemy",
+    description: "STL, QT C++ SDK from Digia, React, Grommet, Material UI, Flask, Pyramid, Celery, SQLAlchemy, GrapQL,",
   },
   {
     skill: "IDE",
@@ -220,12 +223,16 @@ const skills = [
     description: "RocksDB and Redis",
   },
   {
-    skill: "Database",
+    skill: "NoSQL",
     description: "MongoDB and CouchDB",
   },
   {
-    skill: "NoSQL",
-    description: "SQLite and MySQL",
+    skill: "SQL",
+    description: "MySQL,Postgres and SQLite",
+  },
+  {
+    skill:"CI/CD",
+    description: "TravisCI, Jenkins"
   },
   {
     skill: "Cloud Platform",
