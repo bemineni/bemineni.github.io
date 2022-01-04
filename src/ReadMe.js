@@ -282,6 +282,9 @@ const useStyle = makeStyles((theme) => ({
     backgroundColor: "#292d3e",
     color: "#ffffff",
   },
+  linkClass:{
+    color: "#ffffff",
+  }
 }));
 
 function ReadMe() {
@@ -333,10 +336,17 @@ function ReadMe() {
         </Box>
       </Typography>
       <Typography variant="subtitle1">
-        <Box mb={3} ml={1} lineHeight={2}>
+        <Box mb={1} ml={1} lineHeight={2}>
           Docker and Kubernetes course on Udemy
         </Box>
       </Typography>
+      <Typography variant="subtitle1">
+        <Box mb={3} ml={1} lineHeight={2}>
+          <a className={classes.linkClass} target="_blank" href='https://www.credly.com/badges/07fa71ec-c312-4444-98be-b375745441d2'>AWS Certified Solutions Architect – Associate</a>
+        </Box>
+      </Typography>
+
+      
 
       <Grid container>
         <Grid item xs={6}>
